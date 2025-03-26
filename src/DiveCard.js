@@ -42,7 +42,7 @@ const images = importAll(require.context('./diagrams/4way', false, /\.(png|jpe?g
 function GenerateDive() {
     const dive = ['A','1'];
 
-    const filteredArray = images.filter(item => dive.includes(item.key));
+    const filteredArray = dive.map((item) => (item = images.find(image => image.key === item)));
 
     return (
         <ImageList cols={4} gap={4} variant="masonry">
