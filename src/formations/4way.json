@@ -1,0 +1,230 @@
+[
+    {
+        "code": "A",
+        "name": "Unipod",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "B",
+        "name": "Stairstep Diamond",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "C",
+        "name": "Murphy Flake",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "D",
+        "name": "Yuan",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "E",
+        "name": "Meeker",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "F",
+        "name": "Open Accordian",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "G",
+        "name": "Cataccord",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "H",
+        "name": "Bow",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "J",
+        "name": "Donut",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "K",
+        "name": "Hook",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "L",
+        "name": "Adder",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "M",
+        "name": "Star",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "N",
+        "name": "Crank",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "O",
+        "name": "Satellite",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "P",
+        "name": "Sidebody",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "Q",
+        "name": "Phalanx",
+        "type": "Random",
+        "division": "Rookie"
+    },
+    {
+        "code": "1",
+        "name": "Molar - Molar",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "2",
+        "name": "Sidebody Donut - Side Flake Donut",
+        "type": "Block",
+        "division": "Rookie"
+    },
+    {
+        "code": "3",
+        "name": "Side Flake Opal - Turf",
+        "type": "Block",
+        "division": "Advanced"
+    },
+    {
+        "code": "4",
+        "name": "Monopod - Monopod",
+        "type": "Block",
+        "division": "Rookie"
+    },
+    {
+        "code": "5",
+        "name": "Opal - Opal",
+        "type": "Block",
+        "division": "Advanced"
+    },
+    {
+        "code": "6",
+        "name": "Stardian - Stardian",
+        "type": "Block",
+        "division": "Rookie"
+    },
+    {
+        "code": "7",
+        "name": "Sidebuddies - Sidebuddies",
+        "type": "Block",
+        "division": "Rookie"
+    },
+    {
+        "code": "8",
+        "name": "Canadian Tee - Canadian Tee",
+        "type": "Block",
+        "division": "Rookie"
+    },
+    {
+        "code": "9",
+        "name": "Cat-Accordian - Cat-Accordian",
+        "type": "Block",
+        "division": "Rookie"
+    },
+    {
+        "code": "10",
+        "name": "Diamond - Bunyip",
+        "type": "Block",
+        "division": "Advanced"
+    },
+    {
+        "code": "11",
+        "name": "Photon - Photon",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "12",
+        "name": "Bundy - Bundy",
+        "type": "Block",
+        "division": "Advanced"
+    },
+    {
+        "code": "13",
+        "name": "Mixed Accordian - Mixed Accordian",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "14",
+        "name": "Bipole - Bipole",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "15",
+        "name": "Caterpillar - Caterpillar",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "16",
+        "name": "Compressed Accordian - Box",
+        "type": "Block",
+        "division": "Advanced"
+    },
+    {
+        "code": "17",
+        "name": "Danish Tee - Murphy",
+        "type": "Block",
+        "division": "Advanced"
+    },
+    {
+        "code": "18",
+        "name": "Zircon - Zircon",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "19",
+        "name": "Ritz - Icepick",
+        "type": "Block",
+        "division": "Rookie"
+    },
+    {
+        "code": "20",
+        "name": "Piver - Viper",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "21",
+        "name": "Zig Zag - Marquis",
+        "type": "Block",
+        "division": "Rookie"
+    },
+    {
+        "code": "22",
+        "name": "Tee - Chinese Tee",
+        "type": "Block",
+        "division": "Intermediate"
+    }
+]

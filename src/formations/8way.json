@@ -1,0 +1,230 @@
+[
+    {
+        "code": "A",
+        "name": "Caterpillar",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "B",
+        "name": "Stairstep",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "C",
+        "name": "Hourglass",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "D",
+        "name": "Hope Diamond",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "E",
+        "name": "Rubik",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "F",
+        "name": "Diamond Flake",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "G",
+        "name": "Arrowhead",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "H",
+        "name": "Iriquois",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "J",
+        "name": "Springbok",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "K",
+        "name": "Double Meekers",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "L",
+        "name": "Open Facing Diamond",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "M",
+        "name": "Double Spiders",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "N",
+        "name": "Zipper Flake",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "O",
+        "name": "Compressed",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "P",
+        "name": "Venus",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "Q",
+        "name": "Compass",
+        "type": "Random",
+        "division": "Intermediate"
+    },
+    {
+        "code": "1",
+        "name": "Donut Flake - Donut Flake",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "2",
+        "name": "Swiss Bear - Swiss Bear",
+        "type": "Block",
+        "division": "Advanced"
+    },
+    {
+        "code": "3",
+        "name": "Chinese Tees - Donuts",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "4",
+        "name": "Snowflake - In-out",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "5",
+        "name": "Crank - Crank",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "6",
+        "name": "Star - Star",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "7",
+        "name": "Nacho - Nacho",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "8",
+        "name": "Frisbee - Frisbee",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "9",
+        "name": "Taj - Mahal",
+        "type": "Block",
+        "division": "Advanced"
+    },
+    {
+        "code": "10",
+        "name": "Donut - Donut",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "11",
+        "name": "Norwegian Box - Norwegian Donut",
+        "type": "Block",
+        "division": "Advanced"
+    },
+    {
+        "code": "12",
+        "name": "Stereo Bipole - Stereo Bipole",
+        "type": "Block",
+        "division": "Advanced"
+    },
+    {
+        "code": "13",
+        "name": "Double Satellite - Double Satellite",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "14",
+        "name": "Zippered Opals - Zippered Opals",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "15",
+        "name": "Zippers - Double Yuans",
+        "type": "Block",
+        "division": "Advanced"
+    },
+    {
+        "code": "16",
+        "name": "Canadian Tees - Monopods",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "17",
+        "name": "Buzzard - Buzzard",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "18",
+        "name": "Sidebody Donut - Sidebody Donut",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "19",
+        "name": "Compressed Diamonds - Compressed Diamonds",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "20",
+        "name": "Cat Diamond - Cat Accordian",
+        "type": "Block",
+        "division": "Advanced"
+    },
+    {
+        "code": "21",
+        "name": "Free Bear - Eye",
+        "type": "Block",
+        "division": "Intermediate"
+    },
+    {
+        "code": "22",
+        "name": "Old Bone - Compressed Stairstep Diamond",
+        "type": "Block",
+        "division": "Advanced"
+    }
+]

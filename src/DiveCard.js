@@ -23,7 +23,7 @@ export default function DiveCard() {
             Here's the dive - need the generator function
 
           </Typography>
-          <GenerateDive />
+          <DisplayDive />
         </CardContent>
       </Card>
     </div>
@@ -39,8 +39,9 @@ function importAll(r) {
 }
 const images = importAll(require.context('./diagrams/4way', false, /\.(png|jpe?g|svg)$/));
 
-function GenerateDive() {
-    const dive = ['A','1'];
+function DisplayDive() {
+    const dive = ['1','2','3']
+    //,'4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22'];
 
     const filteredArray = dive.map((item) => (item = images.find(image => image.key === item)));
 
@@ -58,4 +59,18 @@ function GenerateDive() {
             ))}
         </ImageList>
     )
+}
+
+function GenerateDive() {
+    const formations = [
+        { formation: "A", score: 1}
+    ]
+
+    const c = formations.length;
+    const random = new random();
+    while(c>0){
+        const r = random.nextInt(c--);
+        const card = formations.get(r);
+        formations.remove(r);
+    }
 }
