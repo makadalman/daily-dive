@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { getFirestore, collection, query, where, getDocs, Timestamp } from "firebase/firestore";
+import { collection, query, where, getDocs, Timestamp, addDoc } from "firebase/firestore";
 import {db} from './firebaseconfig';
 
 export default function GetDive() {
@@ -9,9 +9,7 @@ export default function GetDive() {
 
   const [hatData, setHatData] = useState(null);
   const [hatLoading, setHatLoading] = useState(true);
-        
-  const pool = "4way"
-  const division = "open"
+
   let dive = []
   let newHat = []
 
@@ -20,16 +18,20 @@ export default function GetDive() {
   // if there's already a dive for today, don't generate a new one
   if (!todayLoading && todayData.length > 0) {
     dive = todayData
-  } else {
-
-    GetHat({setHatData, setHatLoading})
-
-    if (!hatLoading && todayData.length == 0) {
-      [dive, newHat] = generateDive(hatData)
-
-      // update the new hat in the database
-    }
   }
+
+  GetHat({setHatData, setHatLoading})
+
+  if (!hatLoading && todayData.length === 0) {
+    [dive, newHat] = generateDive(hatData)
+
+    // put today's dive in the database
+    SaveDive(dive)
+    
+    // update the new hat in the database
+    UpdateHat()
+  }
+  
 
   return dive
 }
@@ -92,9 +94,8 @@ function generateDive(data) {
   const pointsPerRound = 5
 
   let points = 0
-  let hat = data.find(e => e.name == "open").hat
-  const randoms = data.find(e => e.name == "open").randomPool
-  const blocks = data.find(e => e.name == "open").blockPool
+  let hat = data.find(e => e.name === "open").hat
+  const blocks = data.find(e => e.name === "open").blockPool
 
   const randomhat = [...hat];
   for (let i = randomhat.length - 1; i > 0; i--) {
@@ -109,32 +110,40 @@ function generateDive(data) {
     jump.push(page);
     points += (blocks.includes(page)) ? 2 : 1;
   }
-  console.log(randomhat)
-  // return jump
+
   return [jump, randomhat]
 }
 
-const updateHat = async () => {
-  const pool = "4way"
-  const dbcollection = "divepool"
+function SaveDive(dive) {
 
-  const q = query(collection(db, dbcollection), where("name", "==", pool));
+  const day = Timestamp.fromDate(new Date())
 
-  const querySnapshot = await getDocs(q);
-  querySnapshot.forEach((doc) => {
-    const hat = doc.data().hat
-    console.log(hat)
-  });
+  try {
+    const docRef = addDoc(collection(db, "divepool/4way/generatedDives"), {
+      division: "open",
+      dive: dive,
+      date: day
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+
 }
 
-const fetchDiveData = async (dive) => {
-  const pool = "4way"
-  const dbcollection = "divepool/" + pool + "/formations"
+function UpdateHat() {
 
-  const q = query(collection(db, dbcollection), where("code", "in", dive));
-
-  const querySnapshot = await getDocs(q);
-  querySnapshot.forEach((doc) => {
-    console.log(doc.id, " => ", doc.data());
-  });
 }
+
+// const updateHat = async () => {
+//   const pool = "4way"
+//   const dbcollection = "divepool"
+
+//   const q = query(collection(db, dbcollection), where("name", "==", pool));
+
+//   const querySnapshot = await getDocs(q);
+//   querySnapshot.forEach((doc) => {
+//     const hat = doc.data().hat
+//     console.log(hat)
+//   });
+// }
