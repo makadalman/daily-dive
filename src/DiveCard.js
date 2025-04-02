@@ -5,6 +5,8 @@ import Typography from "@mui/material/Typography";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
+import GetDive from "./GetDiveData";
+
 export default function DiveCard() {
   return (
     <div style={{ margin: "30px 15% 0 15%" }}>
@@ -20,8 +22,7 @@ export default function DiveCard() {
             4way - Open/Advanced
           </Typography>
           <Typography variant="body1" sx={{margin: "0 0 5px 0"}}>
-            Here's the dive - need the generator function
-
+            Here's the dive
           </Typography>
           <DisplayDive />
         </CardContent>
@@ -40,37 +41,23 @@ function importAll(r) {
 const images = importAll(require.context('./diagrams/4way', false, /\.(png|jpe?g|svg)$/));
 
 function DisplayDive() {
-    const dive = ['1','2','3']
-    //,'4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22'];
+    const dive = GetDive()
+    const formattedDive = typeof(dive) == 'object' ? dive.join("-") : ''
+    // const filteredArray = dive.map((item) => (item = images.find(image => image.key === item)));
 
-    const filteredArray = dive.map((item) => (item = images.find(image => image.key === item)));
-
-    return (
-        <ImageList cols={4} gap={4} variant="masonry">
-            {filteredArray.map((item) => (
-                <ImageListItem key={item.key} sx={{ border: 1 }}>
-                <img
-                    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                    alt={item.title}
-                    loading="lazy"
-                />
-                </ImageListItem>
-            ))}
-        </ImageList>
-    )
-}
-
-function GenerateDive() {
-    const formations = [
-        { formation: "A", score: 1}
-    ]
-
-    const c = formations.length;
-    const random = new random();
-    while(c>0){
-        const r = random.nextInt(c--);
-        const card = formations.get(r);
-        formations.remove(r);
-    }
+    return ( <p>{formattedDive}</p>)
+    // return (
+    //     <ImageList cols={4} gap={4} variant="masonry">
+    //         {filteredArray.map((item) => (
+    //             <ImageListItem key={item.key} sx={{ border: 1 }}>
+    //             <img
+    //                 srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+    //                 src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+    //                 alt={item.title}
+    //                 loading="lazy"
+    //             />
+    //             </ImageListItem>
+    //         ))}
+    //     </ImageList>
+    // )
 }

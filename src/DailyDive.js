@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   AppBar,
   Container,
@@ -11,32 +11,20 @@ import './DailyDive.css';
 import theme from './theme'
 import DiveCard from './DiveCard.js'
 
-import { getFirestore, collection, query, where, getDocs } from "firebase/firestore";
-import {db} from './firebaseconfig';
+import addData from './formations/UploadFormations.js'
 
 function DailyDive() {
-  const thing = fetchData();
-  // return (
-  //   <>
-  //   <ThemeProvider theme={theme}>
-  //     <Adventurebar/>
-  //     <Container>
-  //       <DiveCard />
-  //     </Container>
-  //   </ThemeProvider>
-  // </>
-  // );
-}
-
-const fetchData = async () => {
-  const pool = "4way";
-  const dbcollection = "divepool/" + pool + "/formations"
-  const q = query(collection(db, dbcollection));
-
-  const querySnapshot = await getDocs(q);
-  querySnapshot.forEach((doc) => {
-    console.log(doc.id, " => ", doc.data());
-  });
+  // addData()
+  return (
+    <>
+    <ThemeProvider theme={theme}>
+      <Adventurebar/>
+      <Container>
+        <DiveCard />
+      </Container>
+    </ThemeProvider>
+  </>
+  );
 }
 
 function Adventurebar() {
