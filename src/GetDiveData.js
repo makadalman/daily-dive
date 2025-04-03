@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { collection, query, where, getDocs, Timestamp, addDoc } from "firebase/firestore";
+import { collection, query, where, getDocs, Timestamp, addDoc, setDoc, doc } from "firebase/firestore";
 import {db} from './firebaseconfig';
 
 export default function GetDive() {
@@ -29,10 +29,9 @@ export default function GetDive() {
     SaveDive(dive)
     
     // update the new hat in the database
-    UpdateHat()
+    SaveNewHat(hatData, newHat)
   }
   
-
   return dive
 }
 
@@ -78,11 +77,12 @@ const fetchHat = async (setHatData, setHatLoading) => {
   let hat = []
 
   try {
-    const q = query(collection(db, "divepool/4way/formations"));
+    const q = query(collection(db, "divepool/4way/formations"), where("name", "==", "open"));
 
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
       hat.push(doc.data())
+      hat.push({id: doc.id})
     });
     setHatData(hat);
   } finally {
@@ -95,9 +95,15 @@ function generateDive(data) {
 
   let points = 0
   let hat = data.find(e => e.name === "open").hat
+  const randoms = data.find(e => e.name === "open").randomPool
   const blocks = data.find(e => e.name === "open").blockPool
 
+  if (hat.length === 0) {
+    hat = [...randoms, ...blocks];
+  }
+
   const randomhat = [...hat];
+
   for (let i = randomhat.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     // Swap elements at i and j
@@ -119,31 +125,26 @@ function SaveDive(dive) {
   const day = Timestamp.fromDate(new Date())
 
   try {
-    const docRef = addDoc(collection(db, "divepool/4way/generatedDives"), {
+    addDoc(collection(db, "divepool/4way/generatedDives"), {
       division: "open",
       dive: dive,
       date: day
     });
-    console.log("Document written with ID: ", docRef.id);
   } catch (e) {
     console.error("Error adding document: ", e);
   }
 
 }
 
-function UpdateHat() {
-
+function SaveNewHat(hatData, newHat) {
+  const docId = hatData.find(e => e.id).id
+  const updatedHat = hatData.find(e => e.hat)
+  updatedHat.hat = newHat
+  
+  try {
+    const docRef = doc(db, "divepool/4way/formations", docId)
+    setDoc(docRef, updatedHat);
+  } catch (e) {
+    console.error("Error adding/updating document: ", e);
+  }
 }
-
-// const updateHat = async () => {
-//   const pool = "4way"
-//   const dbcollection = "divepool"
-
-//   const q = query(collection(db, dbcollection), where("name", "==", pool));
-
-//   const querySnapshot = await getDocs(q);
-//   querySnapshot.forEach((doc) => {
-//     const hat = doc.data().hat
-//     console.log(hat)
-//   });
-// }
