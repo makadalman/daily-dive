@@ -14,7 +14,7 @@ The plan is to evolve to encompass more divisions and disciplines.
 * Expand to 4way Intermediate and Rookie
 * Expand to 8way Open and Intermediate
 
-## Built in React with Mui and Firestore
-React v19
-Firetore v11.5
-MUI v6.4.8
+## Built in React with Mui and Firebase
+* React v19
+* Firebase v11.5
+* MUI v6.4.8
