@@ -38,10 +38,12 @@ function importAll(r) {
     });
     return images;
 }
+
 const images = importAll(require.context('./diagrams/4way', false, /\.(png|jpe?g|svg)$/));
 
 function DisplayDive() {
     const dive = GetDive()
+    
     const formattedDive = typeof(dive) == 'object' ? dive.join("-") : ''
     const filteredArray = dive.map((item) => (item = images.find(image => image.key === item)));
 
@@ -49,9 +51,9 @@ function DisplayDive() {
     return (
       <>
         <p>{formattedDive}</p>
-        <ImageList cols={dive.length} gap={4} variant="masonry">
+        <ImageList cols={dive.length} gap={4} variant="masonry" sx={{ marginBottom: 0 }}>
             {filteredArray.map((item) => (
-                <ImageListItem key={item.key} sx={{ border: 1 }}>
+                <ImageListItem key={item.key} sx={{ border: 1, height: 120 }}>
                 <img
                     srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                     src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
