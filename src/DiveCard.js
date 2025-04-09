@@ -51,14 +51,15 @@ function DisplayDive() {
     return (
       <>
         <p>{formattedDive}</p>
-        <ImageList cols={dive.length} gap={4} variant="masonry" sx={{ marginBottom: 0 }}>
+        <ImageList cols={dive.length} gap={4} sx={{ marginBottom: 0 }}>
             {filteredArray.map((item) => (
-                <ImageListItem key={item.key} sx={{ border: 1, height: 120 }}>
+                <ImageListItem key={item.key} sx={{ border: 1 }} style={{height: "fit-content"}}>
                 <img
-                    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                    srcSet={`${item.img}?auto=format&dpr=2 2x`}
+                    src={`${item.img}?auto=format`}
                     alt={item.title}
                     loading="lazy"
+                    style={{ objectFit: "contain" }}
                 />
                 </ImageListItem>
             ))}

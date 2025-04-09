@@ -15,7 +15,7 @@ export default function GetDive() {
   GetTodaysDive({setTodayData, setTodayLoading, setHatData, setHatLoading})
 
   // if there's already a dive for today, don't generate a new one
-  if (!todayLoading && todayData.length > 0) {
+  if (!todayLoading) {
     dive = todayData
   }
   
