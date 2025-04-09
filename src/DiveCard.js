@@ -13,13 +13,16 @@ export default function DiveCard() {
       <Card  variant="outlined" orientation="horizontal"
         sx={{
           minHeight: '200px',
-          minWidth: 500,
+          width: {
+            lg: 400, // theme.breakpoints.up('lg')
+            xl: 500, // theme.breakpoints.up('xl')
+          },
           backgroundColor: '#fff',
           borderColor: '#000',
         }}>
         <CardContent>
           <Typography variant="h4" gutterBottom>
-            4way - Open/Advanced
+            4way - Open
           </Typography>
           <Typography variant="body1" sx={{margin: "0 0 5px 0"}}>
             Here's the dive
