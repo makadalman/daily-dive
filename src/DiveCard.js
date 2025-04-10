@@ -9,21 +9,18 @@ import GetDive from "./GetDiveData";
 
 export default function DiveCard() {
   return (
-    <div style={{ margin: "30px 15% 0 15%" }}>
+    <div style={{ justifyItems: "center" }}>
       <Card  variant="outlined" orientation="horizontal"
         sx={{
           minHeight: '200px',
           width: {
-            lg: 400, // theme.breakpoints.up('lg')
-            xl: 500, // theme.breakpoints.up('xl')
+            lg: 800, // theme.breakpoints.up('lg')
+            xl: 900, // theme.breakpoints.up('xl')
           },
           backgroundColor: '#fff',
           borderColor: '#000',
         }}>
         <CardContent>
-          <Typography variant="h4" gutterBottom>
-            4way - Open
-          </Typography>
           <Typography variant="body1" sx={{margin: "0 0 5px 0"}}>
             Here's the dive
           </Typography>
